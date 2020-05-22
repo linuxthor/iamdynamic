@@ -6,7 +6,7 @@
 ; to load something for us and then pass control..
 ;
 ; ./dynamic0: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), 
-;   dynamically linked, interpreter /lib/x86_64-linux-gnu/ld-2.27.so
+;   dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2
 ;
 ; assemble with:
 ; nasm -f elf64 -o dynamic0.o dynamic0.asm
@@ -31,7 +31,7 @@ section .data
     len equ $ - string
 
 section .interp
-    zig db '/lib/x86_64-linux-gnu/ld-2.27.so',0
+    zig db '/lib64/ld-linux-x86-64.so.2',0
     zag db 'libc.so.6',0 
 
 section .dynamic
