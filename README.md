@@ -13,7 +13,7 @@ The things that distinguish a dynamic ELF file from a static one are the presenc
 
 This example shows the very minimum required to be recognised as a dynamic ELF and to arrange for the loader to pass control to our code. 
 ```
-./dynamic0: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib/x86_64-linux-gnu/ld-2.27.so, not stripped
+./dynamic0: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, not stripped
 ```
  
 [dynamic1](https://github.com/linuxthor/iamdynamic/blob/master/1/dynamic1.asm)
