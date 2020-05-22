@@ -82,9 +82,9 @@ Breakpoint 1, 0x0000000000400150 in _start ()
 
 [dynamic4](https://github.com/linuxthor/iamdynamic/blob/master/4/dynamic4.asm) 
 
-This example specifies the included shared object as it's loader. After the shared object finishes it's work it executes the system loader as an ELF binary (which is valid on Linux) and asks it to execute the example file under the control of the system loader. As the loader is re-executing our file we don't need to know the entrypoint (which isn't always useful anyway depending on how things are loaded in memory etc..)
+This example specifies the included shared object as it's loader. It then executes the system loader as an ELF binary (valid on Linux) and asks it to execute the example file under the control of the system loader. As the loader is re-executing our file we don't need to know the origina entrypoint (which isn't always useful anyway depending on how things are loaded in memory etc..)
 
-Editing the .interp section of an ELF binary to add a loader like the one in dynamic4 is a reasonable way to take control of execution before the normal entry point is reached..  
+Meaning.. Changing the .interp section of some ELF binary to add a loader like the one in dynamic4 is a way to take control of execution before the normal entry point is reached..  
 
 e.g we take a copy of /bin/echo and change the .interp section so that the loader is ./0.so and not /lib64/ld-linux-x86-64.so.2 and our library code will be executed - control is then given back to echo by executing /lib64/ld-linux-x86-64.so.2 asking to re-execute the binary which will, this time, ignore the library set in .interp and enter the program via it's usual entrypoint 
 ```
