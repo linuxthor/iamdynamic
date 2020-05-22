@@ -60,7 +60,7 @@ dynamic2: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linke
 
 [dynamic3](https://github.com/linuxthor/iamdynamic/blob/master/3/dynamic3.asm)
 
-In this example we use the system loader and ask it to load our shared object - this has the side effect of automatically executing code in the init function of that library. This can serve as the basis for some anti-debug technique as the code is executed very early. 
+In this example we use the system loader and ask it to load our shared object - this has the side effect of automatically executing code in the \_init function of that library. This can serve as the basis for some anti-debug technique as the code is executed very early. 
 
 e.g gdb:  
 ```
