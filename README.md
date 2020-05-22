@@ -18,7 +18,7 @@ This example shows the very minimum required to be recognised as a dynamic ELF a
  
 [dynamic1](https://github.com/linuxthor/iamdynamic/blob/master/1/dynamic1.asm)
 
-This example demonstrates that the loader will load some arbitrary ELF file into memory for us (e.g /bin/bash) and also it's dependencies. We can use code that we can locate in memory in a ROP-ish way. 
+This example demonstrates that the loader will load some library or (position independant) ELF binary into memory for us (e.g /bin/bash) and also it's dependencies. We can use code that we can locate in memory in a ROP-ish way. 
 ```
 00400000-00602000 rwxp 00000000 fd:01 396646                             /home/j100/dynamics/1/dynamic1
 7ffff729c000-7ffff7483000 r-xp 00000000 fd:01 5903028                    /lib/x86_64-linux-gnu/libc-2.27.so
