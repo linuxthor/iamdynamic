@@ -47,7 +47,7 @@ section .data
 ; before passing over to _start..
 
 section .interp
-    zig db '/lib/x86_64-linux-gnu/ld-2.27.so',0
+    zig db '/lib64/ld-linux-x86-64.so.2',0
     zag db '/bin/bash',0
 
 section .dynamic
