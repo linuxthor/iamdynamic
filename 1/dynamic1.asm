@@ -2,7 +2,7 @@
 ;
 ; dynamic ELF load-me-do with a weird twist
 ;
-; we can ask the loader to load some ELF file for us (e.g /bin/bash -
+; we can ask the loader to load some PIE ELF file for us (e.g /bin/bash -
 ; not just .so libraries) it will be placed in memory along with it's
 ; dependencies (e.g libc.so, libtinfo.so etc)
 ;
